@@ -1,7 +1,7 @@
 CImageModifier changelog
 ==========================
 
-1.1 beta under development
+1.1, April 9, 2014
 ----------------------------
 
 - Upd: class.upload.php v.0.32.
