@@ -1,0 +1,4 @@
+CImageModifier
+==============
+
+cimagemodifier Yii extension
