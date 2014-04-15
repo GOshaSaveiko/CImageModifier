@@ -17,8 +17,7 @@ GD library
 
 **connection way 1:**
 In your config.php file, in the components section, add the following:
-~~~
-[php]
+~~~php
 'imagemod' => array(
                //alias to dir, where you unpacked extension
     'class' => 'application.extensions.imagemodifier.CImageModifier',
@@ -26,15 +25,13 @@ In your config.php file, in the components section, add the following:
 ~~~
 **connection way 2:**
 in your code:
-~~~
-[php]
+~~~php
 Yii::app()->setComponents(array('imagemod'=>array('class'=>'application.extensions.imagemodifier.CImageModifier')));
 ~~~
 
 3. Main usage 
 for uploaded image:
-~~~
-[php]
+~~~php
 $img = Yii::app()->imagemod->load($_FILES['form_field']);
 if ($img->uploaded) {
     $img->image_resize          = true;
@@ -49,11 +46,9 @@ if ($img->uploaded) {
       echo 'error : ' . $img->error;
     }
 }
-
 ~~~
 or for static image:
-~~~
-[php]
+~~~php
 $img = Yii::app()->imagemod->load('path/to/image');
 $img->image_resize          = true;
 $img->image_ratio_y         = true;
@@ -71,8 +66,7 @@ if ($img->processed) {
 ##Methods
 #### setLanguage($string)
 By default this extension uses language set in **config.php** of your project. But you can change it using
-~~~
-[php]
+~~~php
 Yii::app()->imagemod->setLanguage('ru_RU');
 ~~~
 You can see al supported languages in extension `/lang` dir.
